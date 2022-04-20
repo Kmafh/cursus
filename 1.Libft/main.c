@@ -2,11 +2,10 @@
 
 int main()
 {
-	const char d[]="Que pasa tia";
-	char *nuevo;
-	nuevo=strchr(d,'s');
-	
-			
-	printf("%s",nuevo);
+	char d[]="aajoo";
+	char cad[]="aajoo";
+	int entero;
+	entero=strncmp(d ,cad,1);
+	printf("%d",entero);
 
 }
