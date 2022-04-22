@@ -1,4 +1,5 @@
-DIROBJS= 
+TARGET= exe
+DIROBJS= ../
 OBJS= $(DIROBJS)ft_isalpha.o $(DIROBJS)ft_isdigit.o $(DIROBJS)ft_isalnum.o $(DIROBJS)ft_isascii.o \
 $(DIROBJS)ft_strlen.o $(DIROBJS)ft_isprint.o $(DIROBJS)ft_memset.o $(DIROBJS)ft_bzero.o \
 $(DIROBJS)ft_memcpy.o $(DIROBJS)ft_memmove.o $(DIROBJS)ft_strlcpy.o $(DIROBJS)ft_strlcat.o  $(DIROBJS)ft_toupper.o \
@@ -9,26 +10,19 @@ CFLAGS= -Wall -Werror -Wextra
 DEPN=libft.h
 CC = gcc
 NAME=libft.a
-MAIN= main.o $(OBJS)
 AR = ar
 ARFLAGS = -crs
 RANLIB = ranlib
-DIRA = ./
+DIRA = ../
 
-all: $(NAME) aut
+all: $(NAME)
 
 %.c : %.o
-	@$(CC) -c $(CFLAGS) -o $< $@
-
+	-$(CC) -c $(CFLAGS) -o $< $@
 # Generate Library
 $(NAME) : $(OBJS)
-	@$(AR) $(ARFLAGS) $(DIRA)$(NAME) $(OBJS)
-	@$(RANLIB) $(DIRA)$(NAME)
-
-# Generate a.out
-
-aut : ${MAIN} 
-	@$(CC) ${CFLAGS} $(MAIN)
+	$(AR) $(ARFLAGS) $(DIRA)$(NAME) $(OBJS)
+	$(RANLIB) $(DIRA)$(NAME)
 
 .PHONY: clean re fclean
 clean:

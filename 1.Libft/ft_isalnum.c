@@ -1,3 +1,7 @@
+
+//
+//comprueba un carácter alfanumérico; es equivalente a (isalpha(c) || ​​isdigit(c)).
+//
 #include "libft.h"
 
 int ft_isalnum(int c)

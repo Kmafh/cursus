@@ -1,3 +1,14 @@
+
+
+//
+// The strlcat() function appends the NUL-terminated string src to the end of dst. 
+// It will append at most size - strlen(dst) - 1 bytes, NUL-terminating the result.
+//
+// La función strlcat() agrega la cadena src terminada en NUL al final de dst. 
+// Agregará como máximo el tamaño - strlen (dst) - 1 byte, terminando en NUL el resultado.
+//
+
+
 #include "libft.h"
 
 size_t ft_strlcat(char * dst, const char * src, size_t dstsize)

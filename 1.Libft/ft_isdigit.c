@@ -1,5 +1,7 @@
-#include "libft.h"
 
+//
+//comprueba un carácter numérico.
+//
 int ft_isdigit(int c)
 {
 	int aux;

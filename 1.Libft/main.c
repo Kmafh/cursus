@@ -1,11 +1,14 @@
 #include "libft.h"
-
-int main()
+#include <stdio.h>
+int main(void)
 {
-	char d[]="aajoo";
-	char cad[]="aajoo";
-	int entero;
-	entero=strncmp(d ,cad,1);
-	printf("%d",entero);
-
+       
+      void *cad="PEPitoP";
+      char *res;
+        
+      
+      
+      res=ft_memset(cad,'f',3);
+      printf("%s\n",res);
+      return(0);
 }

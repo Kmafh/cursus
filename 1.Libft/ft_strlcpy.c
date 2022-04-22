@@ -1,3 +1,11 @@
+
+//
+// The strlcpy() function copies up to size - 1 characters from the NUL-terminated string src to dst, NUL-terminating the result.
+//
+// La función strlcpy() copia hasta el tamaño - 1 caracteres de la cadena terminada en NUL src a dst, terminando en NUL 
+// el resultado.
+//
+
 #include "libft.h"
 
 size_t ft_strlcpy(char * dst, const char * src, size_t dstsize)

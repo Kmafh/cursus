@@ -1,4 +1,8 @@
-#include "libft.h"
+
+//
+// checks for any printable character including space.
+// comprueba cualquier carácter imprimible, incluido el espacio.
+//
 
 int ft_isprint(int c)
 {
