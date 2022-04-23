@@ -6,17 +6,19 @@
 //
 
 #include "libft.h"
-
+#include <stdio.h>
 void *ft_memset(void *s, int c, size_t n)
 {
+	
+	char *cad;
 	int i;
 	i=0;
-	char *cad;
 	cad=s;
-	while(n-->0)
+	while(i++<=(int)n)
 		{
-			cad[i]=c;
-			i++;
+			*cad++=c;
+			printf("%c:%c",*cad++,c);
+			
 		}
 	return (s);
 }

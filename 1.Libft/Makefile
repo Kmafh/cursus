@@ -3,7 +3,8 @@ OBJS= $(DIROBJS)ft_isalpha.o $(DIROBJS)ft_isdigit.o $(DIROBJS)ft_isalnum.o $(DIR
 $(DIROBJS)ft_strlen.o $(DIROBJS)ft_isprint.o $(DIROBJS)ft_memset.o $(DIROBJS)ft_bzero.o \
 $(DIROBJS)ft_memcpy.o $(DIROBJS)ft_memmove.o $(DIROBJS)ft_strlcpy.o $(DIROBJS)ft_strlcat.o  $(DIROBJS)ft_toupper.o \
 $(DIROBJS)ft_tolower.o $(DIROBJS)ft_strchr.o $(DIROBJS)ft_strrchr.o $(DIROBJS)ft_strncmp.o $(DIROBJS)ft_memchr.o \
-$(DIROBJS)ft_memcmp.o $(DIROBJS)ft_strnstr.o $(DIROBJS)ft_atoi.o $(DIROBJS)ft_calloc.o
+$(DIROBJS)ft_memcmp.o $(DIROBJS)ft_strnstr.o $(DIROBJS)ft_atoi.o $(DIROBJS)ft_calloc.o \
+$(DIROBJS)ft_strdup.o $(DIROBJS)ft_substr.o $(DIROBJS)ft_strjoin.o $(DIROBJS)ft_strtrim.o
 CFLAGS= -Wall -Werror -Wextra
 
 DEPN=libft.h
@@ -15,13 +16,13 @@ ARFLAGS = -crs
 RANLIB = ranlib
 DIRA = ./
 
-all: $(NAME) aut
+all: $(NAME) aut $(DEPN)
 
 %.c : %.o
 	@$(CC) -c $(CFLAGS) -o $< $@
 
 # Generate Library
-$(NAME) : $(OBJS)
+$(NAME) : $(OBJS) 
 	@$(AR) $(ARFLAGS) $(DIRA)$(NAME) $(OBJS)
 	@$(RANLIB) $(DIRA)$(NAME)
 

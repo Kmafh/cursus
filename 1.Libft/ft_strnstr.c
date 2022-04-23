@@ -26,5 +26,5 @@ char *ft_strnstr(const char * s1, const char * s2, size_t len)
                         return(char *)s1;
                 
             }
-      return (void *)cad;
+      return cad;
 }

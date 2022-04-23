@@ -1,14 +1,13 @@
 #include "libft.h"
 #include <stdio.h>
+#include <stdio.h>
 int main(void)
 {
        
-      void *cad="PEPitoP";
-      char *res;
-        
-      
-      
-      res=ft_memset(cad,'f',3);
-      printf("%s\n",res);
+      char * chad="algo";
+
+     char * ch;
+     ch=ft_memset(chad,';',4);
+      printf("1 = true 0=false : %s\n",ch);
       return(0);
 }
